@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gridViewCarrera = new System.Windows.Forms.DataGridView();
+            this.gridViewMateria = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.comboMateria = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCarrera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewMateria)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.gridViewCarrera, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gridViewMateria, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,18 +60,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(359, 307);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // gridViewCarrera
+            // gridViewMateria
             // 
-            this.gridViewCarrera.AllowUserToAddRows = false;
-            this.gridViewCarrera.AllowUserToDeleteRows = false;
-            this.gridViewCarrera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewCarrera.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridViewCarrera.Location = new System.Drawing.Point(3, 64);
-            this.gridViewCarrera.Name = "gridViewCarrera";
-            this.gridViewCarrera.ReadOnly = true;
-            this.gridViewCarrera.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewCarrera.Size = new System.Drawing.Size(353, 193);
-            this.gridViewCarrera.TabIndex = 2;
+            this.gridViewMateria.AllowUserToAddRows = false;
+            this.gridViewMateria.AllowUserToDeleteRows = false;
+            this.gridViewMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewMateria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridViewMateria.Location = new System.Drawing.Point(3, 64);
+            this.gridViewMateria.Name = "gridViewMateria";
+            this.gridViewMateria.ReadOnly = true;
+            this.gridViewMateria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewMateria.Size = new System.Drawing.Size(353, 193);
+            this.gridViewMateria.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -172,7 +172,7 @@
             this.Name = "RegistroMateria";
             this.Text = "Agregar Materia";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCarrera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewMateria)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -189,7 +189,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridView gridViewCarrera;
+        private System.Windows.Forms.DataGridView gridViewMateria;
         private System.Windows.Forms.Button btnEliminar;
     }
 }

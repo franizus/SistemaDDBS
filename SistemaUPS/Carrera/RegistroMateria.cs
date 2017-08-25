@@ -75,7 +75,7 @@ namespace SistemaUPS.Carrera
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@ID_MATERIA", SqlDbType.Int).Value = materia;
-            cmd.Parameters.Add("@ID_CARRERA", SqlDbType.Char).Value = carrera;
+            cmd.Parameters.Add("@ID_CARRERA", SqlDbType.Int).Value = carrera;
             cmd.Parameters.Add("@NODO", SqlDbType.Int).Value = 1;
 
             cmd.ExecuteNonQuery();
@@ -108,12 +108,12 @@ namespace SistemaUPS.Carrera
             dataAdapter.Fill(ds);
             BindingSource bsSource = new BindingSource();
             bsSource.DataSource = ds;
-            gridViewCarrera.ReadOnly = true;
-            gridViewCarrera.DataSource = bsSource;
+            gridViewMateria.ReadOnly = true;
+            gridViewMateria.DataSource = bsSource;
             conexionSql.Desconectar();
 
-            gridViewCarrera.Columns[1].Visible = false;
-            gridViewCarrera.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            gridViewMateria.Columns[1].Visible = false;
+            gridViewMateria.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace SistemaUPS.Carrera
                     MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int carrera = getIDCarrera(id);
-                int materia = getIDMateria(gridViewCarrera.SelectedRows[0].Cells[0].Value.ToString());
+                int materia = getIDMateria(gridViewMateria.SelectedRows[0].Cells[0].Value.ToString());
                 conexionSql.Conectar();
                 SqlCommand comando = new SqlCommand("set xact_abort on begin distributed transaction delete from V_MATERIA_CARRERA where ID_CARRERA = '" + carrera + "' AND ID_MATERIA = '" + materia + "'  commit", conexionSql.getConnection());
                 try

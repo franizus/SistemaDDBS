@@ -146,6 +146,18 @@
     <EmbeddedResource Include="Estudiante\Estudiante.resx">
       <DependentUpon>Estudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Materia\BusquedaMateria.resx">
+      <DependentUpon>BusquedaMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materia\Materia.resx">
+      <DependentUpon>Materia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materia\RegistroEstudiante.resx">
+      <DependentUpon>RegistroEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materia\RegistroProfesor.resx">
+      <DependentUpon>RegistroProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>

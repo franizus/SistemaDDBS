@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaUPS.Carrera;
 using SistemaUPS.Estudiante;
+using SistemaUPS.Materia;
 using SistemaUPS.Profesor;
 
 namespace SistemaUPS
@@ -54,32 +55,38 @@ namespace SistemaUPS
 
         private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            Materia.Materia ma = new Materia.Materia("registro", "");
+            ma.Show();
         }
 
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            BusquedaMateria bm = new BusquedaMateria("Consultar");
+            bm.Show();
         }
 
         private void modificarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            BusquedaMateria bm = new BusquedaMateria("Modificar");
+            bm.Show();
         }
 
         private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            BusquedaMateria bm = new BusquedaMateria("Eliminar");
+            bm.Show();
         }
 
         private void registrarEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            BusquedaMateria bm = new BusquedaMateria("estudiante");
+            bm.Show();
         }
 
         private void registrarProfesorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            BusquedaMateria bm = new BusquedaMateria("profesor");
+            bm.Show();
         }
 
         private void registrarToolStripMenuItem2_Click(object sender, EventArgs e)
