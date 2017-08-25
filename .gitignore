@@ -1,0 +1,8 @@
+
+\.vs/
+SistemaUPS/bin/
+SistemaUPS/obj/
+SistemaUPS/UPS_GIRONDataSet.Designer.cs
+SistemaUPS/UPS_GIRONDataSet.xsc
+SistemaUPS/UPS_GIRONDataSet.xsd
+SistemaUPS/UPS_GIRONDataSet.xss
