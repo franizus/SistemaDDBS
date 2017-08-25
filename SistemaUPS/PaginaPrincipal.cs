@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaUPS.Carrera;
+using SistemaUPS.Estudiante;
+using SistemaUPS.Profesor;
 
 namespace SistemaUPS
 {
@@ -82,42 +84,62 @@ namespace SistemaUPS
 
         private void registrarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            Profesor.Profesor p = new Profesor.Profesor("registro", "");
+            p.Show();
         }
 
         private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            BusquedaProfesor bp = new BusquedaProfesor("Consultar");
+            bp.Show();
         }
 
         private void modificarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            BusquedaProfesor bp = new BusquedaProfesor("Modificar");
+            bp.Show();
         }
 
         private void eliminarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            BusquedaProfesor bp = new BusquedaProfesor("Eliminar");
+            bp.Show();
         }
 
         private void registrarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            Estudiante.Estudiante es = new Estudiante.Estudiante("registro", "");
+            es.Show();
         }
 
         private void consultarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            BusquedaEstudiante be = new BusquedaEstudiante("Consultar");
+            be.Show();
         }
 
         private void modificarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            BusquedaEstudiante be = new BusquedaEstudiante("Modificar");
+            be.Show();
         }
 
         private void eliminarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            BusquedaEstudiante be = new BusquedaEstudiante("Eliminar");
+            be.Show();
+        }
 
+        private void consultarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            BusquedaProfesor bp = new BusquedaProfesor("Consultar Nomina");
+            bp.Show();
+        }
+
+        private void modificarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            BusquedaProfesor bp = new BusquedaProfesor("Modificar Nomina");
+            bp.Show();
         }
     }
 }

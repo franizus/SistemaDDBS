@@ -64,11 +64,65 @@
       <DependentUpon>RegistroMateria.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexionSQL.cs" />
+    <Compile Include="Estudiante\BusquedaEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estudiante\BusquedaEstudiante.Designer.cs">
+      <DependentUpon>BusquedaEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiante\Estudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estudiante\Estudiante.Designer.cs">
+      <DependentUpon>Estudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materia\BusquedaMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materia\BusquedaMateria.Designer.cs">
+      <DependentUpon>BusquedaMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materia\Materia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materia\Materia.Designer.cs">
+      <DependentUpon>Materia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materia\RegistroEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materia\RegistroEstudiante.Designer.cs">
+      <DependentUpon>RegistroEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materia\RegistroProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materia\RegistroProfesor.Designer.cs">
+      <DependentUpon>RegistroProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\BusquedaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\BusquedaProfesor.Designer.cs">
+      <DependentUpon>BusquedaProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Nomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\Nomina.Designer.cs">
+      <DependentUpon>Nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor\Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor\Profesor.Designer.cs">
+      <DependentUpon>Profesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,8 +140,20 @@
     <EmbeddedResource Include="Carrera\RegistroMateria.resx">
       <DependentUpon>RegistroMateria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estudiante\BusquedaEstudiante.resx">
+      <DependentUpon>BusquedaEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estudiante\Estudiante.resx">
+      <DependentUpon>Estudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\BusquedaProfesor.resx">
+      <DependentUpon>BusquedaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesor\Profesor.resx">
+      <DependentUpon>Profesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,11 +189,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Estudiante\" />
-    <Folder Include="Materia\" />
-    <Folder Include="Profesor\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\background.png" />
   </ItemGroup>

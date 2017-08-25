@@ -190,7 +190,10 @@ namespace SistemaUPS.Carrera
             }
             else
             {
-                txtID.Clear();
+                if (tipo.Equals("registro"))
+                {
+                    txtID.Clear();
+                }
                 txtNombre.Clear();
                 numericSemestres.Value = 1;
             }

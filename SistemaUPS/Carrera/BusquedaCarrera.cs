@@ -60,14 +60,14 @@ namespace SistemaUPS.Carrera
                 {
                     id = gridViewCarrera.SelectedRows[0].Cells[0].Value.ToString();
                     Carrera form = new Carrera(tipo, id);
-                    form.Text = tipo + " Cliente";
+                    form.Text = tipo + " Carrera";
                     form.Show();
                 }
                 btnSalir.PerformClick();
             }
             else
             {
-                MessageBox.Show("No se ha seleccionado un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se ha seleccionado una carrera.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtBusqueda.Clear();
             }
         }

@@ -24,9 +24,14 @@ namespace SistemaUPS.Carrera
             MaximizeBox = false;
             MinimizeBox = false;
             this.id = id;
+            actualizarComponentes();
+        }
+
+        private void actualizarComponentes()
+        {
             initGridView();
             fillComboMateria();
-            cmbMateria.SelectedIndex = 0;
+            comboMateria.SelectedIndex = 0;
         }
 
         private int getIDCarrera(string carrera)
@@ -64,7 +69,7 @@ namespace SistemaUPS.Carrera
         private void guardarMateriaCarrera()
         {
             int carrera = getIDCarrera(id);
-            int materia = getIDMateria(cmbMateria.Text);
+            int materia = getIDMateria(comboMateria.Text);
             conexionSql.Conectar();
             SqlCommand cmd = new SqlCommand("registrarMATERIA_CARRERA", conexionSql.getConnection());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -79,14 +84,15 @@ namespace SistemaUPS.Carrera
 
         private void fillComboMateria()
         {
-            cmbMateria.Items.Clear();
+            comboMateria.Items.Clear();
+
             conexionSql.Conectar();
-            string query = "select [Nombre Materia] from materiaCarreraGiron where not [Nombre Carrera] = '" + id + "' order by [Nombre Materia]";
+            string query = "select [Nombre Materia] from materiaCarreraGiron where not [Nombre Materia] in (Select [Nombre Materia] from materiaCarreraGiron where [Nombre Carrera] = '" + id + "') order by [Nombre Materia]";
             SqlCommand sqlCmd = new SqlCommand(query, conexionSql.getConnection());
             SqlDataReader sqlReader = sqlCmd.ExecuteReader();
             while (sqlReader.Read())
             {
-                cmbMateria.Items.Add(sqlReader["Nombre Materia"].ToString());
+                comboMateria.Items.Add(sqlReader["Nombre Materia"].ToString());
             }
 
             sqlReader.Close();
@@ -113,9 +119,7 @@ namespace SistemaUPS.Carrera
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             guardarMateriaCarrera();
-            initGridView();
-            fillComboMateria();
-            cmbMateria.SelectedIndex = 0;
+            actualizarComponentes();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -135,9 +139,7 @@ namespace SistemaUPS.Carrera
                 try
                 {
                     comando.ExecuteNonQuery();
-                    initGridView();
-                    fillComboMateria();
-                    cmbMateria.SelectedIndex = 0;
+                    actualizarComponentes();
                 }
                 catch (Exception ex)
                 {
